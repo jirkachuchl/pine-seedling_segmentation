@@ -1,0 +1,4 @@
+[submodule "4_segmentation/yolov7"]
+	path = 4_segmentation/yolov7
+	url = https://github.com/WongKinYiu/yolov7.git
+	branch = u7
