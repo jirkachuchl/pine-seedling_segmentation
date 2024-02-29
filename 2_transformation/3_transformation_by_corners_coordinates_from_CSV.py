@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Feb 23 21:55:57 2024
-
-@author: jirka
-"""
-
 import cv2
 import numpy as np
 import csv
@@ -12,22 +5,27 @@ import os
 
 
 # Load the CSV file containing the image names and corner coordinates
-csv_file_path = "D:/jirka/Documents/skola/Ing/DP/rijen_sadbovace/corrected_rijen/pokus/1_corrected.csv"
+csv_file_path = "C:/path/to/your/csv/with/coordinates/coordinates.csv"
 
 # Set the path to the folder containing the images
-images_folder_path = "D:/jirka/Documents/skola/Ing/DP/rijen_sadbovace/corrected_rijen/pokus"
+images_folder_path = "C:/path/to/your/folder/with/images"
 
 # Set the path to the folder for the transformed image results
-results_folder_path = "D:/jirka/Documents/skola/Ing/DP/rijen_sadbovace/corrected_rijen/pokus"
+results_folder_path = "C:/path/to/your/output/folder"
 
+
+############################### Functions ##################################
 # Read the CSV file
 with open(csv_file_path, 'r') as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=',')  # Assuming comma as the delimiter
-    # next(csvreader)  # Skip the header row if there is one
+    csvreader = csv.reader(csvfile, delimiter=';')
+    #next(csvreader)  # Skip the header row
     for row in csvreader:
         # Get the image name and corner coordinates from the current row
         image_name = row[0]
-        corners = [(int(row[i]), int(row[i+1])) for i in range(1, len(row), 2)]
+        corner1 = tuple(map(int, row[1].split(', ')))
+        corner2 = tuple(map(int, row[2].split(', ')))
+        corner3 = tuple(map(int, row[3].split(', ')))
+        corner4 = tuple(map(int, row[4].split(', ')))
 
         # Construct the image path
         image_path = os.path.join(images_folder_path, image_name)
@@ -36,14 +34,14 @@ with open(csv_file_path, 'r') as csvfile:
         image = cv2.imread(image_path)
 
         # Calculate the dimensions of the planter
-        planter_width = max(corners[1][0] - corners[0][0], corners[2][0] - corners[3][0])
-        planter_height = max(corners[3][1] - corners[0][1], corners[2][1] - corners[1][1])
+        planter_width = max(corner2[0] - corner1[0], corner3[0] - corner4[0])
+        planter_height = max(corner4[1] - corner1[1], corner3[1] - corner2[1])
 
         # Define the surrounding area
         surrounding_pixels = 400
 
         # Define the source and destination points for perspective transformation
-        src_points = np.float32(corners)
+        src_points = np.float32([corner1, corner2, corner3, corner4])
         dst_points = np.float32([[surrounding_pixels, surrounding_pixels],
                                  [planter_width + surrounding_pixels, surrounding_pixels],
                                  [planter_width + surrounding_pixels, planter_height + surrounding_pixels],
@@ -56,6 +54,7 @@ with open(csv_file_path, 'r') as csvfile:
         transformed_image = cv2.warpPerspective(image, transformation_matrix,
                                                 (planter_width + 2 * surrounding_pixels,
                                                  planter_height + 2 * surrounding_pixels))
+        
 
         # Calculate the scale factor for displaying the image
         scale_factor = min(1.0, 800 / transformed_image.shape[1], 600 / transformed_image.shape[0])
@@ -72,7 +71,7 @@ with open(csv_file_path, 'r') as csvfile:
         cv2.destroyAllWindows()
 
         # Construct the transformed image path
-        transformed_image_path = os.path.join(results_folder_path, f'{image_name.split(".")[0]}_transformed.png')
-        
+        transformed_image_path = os.path.join(results_folder_path, image_name.split('.')[0] + '_transformed.png')
         # Save the transformed image
         cv2.imwrite(transformed_image_path, transformed_image)
+############################### /Functions ##################################
