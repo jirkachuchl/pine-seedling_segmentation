@@ -3,7 +3,7 @@
 - [Coordinates of corners to csv](#Coordinates-of-corners-to-csv)
 - [Image transformation](#Image-transformation)
 
-## Coordinates of corners to csv
+## Coordinates of corners to csv | [code](./2_corners_coordinates_to_csv.py)
 
 First it is necessary to save the coordinates of planter to csv. After running this sript the new window will open. You will click on  the corners in this order:
 - 1st: upper left corner
@@ -14,7 +14,7 @@ First it is necessary to save the coordinates of planter to csv. After running t
 This script is created as loop, so insert path to directory with your images and insert range of images (+1) and it will open automatically all images in the directory
 Don't forget to fill path to your output csv file.
 
-## Example Usage
+### Example Usage
 
 The script includes an example loop for processing multiple images.
 
@@ -32,5 +32,20 @@ result_df.to_csv("C:/path/to/your/output/csvfile/coordinates.csv", index=False, 
 print("Clicked Coordinates Table for All Images:")
 print(result_df)
 ```
-## Image transformation
+## Image transformation | [code](./3_transformation_by_corners_coordinates_from_CSV.py)
+In this code, you only have to set paths:
+- path to csv with corners coordinates (csv_file_path)
+- path to the folder containing the images of planters you want to transform (images_folder_path)
+- path to the folder for the transformed image results (results_folder_path)
+
+### Example Usage
+```python
+# Load the CSV file containing the image names and corner coordinates
+csv_file_path = "C:/path/to/your/csv/with/coordinates/coordinates.csv"
+
+# Set the path to the folder containing the images
+images_folder_path = "C:/path/to/your/folder/with/images"
+
+# Set the path to the folder for the transformed image results
+results_folder_path = "C:/path/to/your/output/folder"
 
