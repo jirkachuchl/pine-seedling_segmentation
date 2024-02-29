@@ -19,14 +19,14 @@ This project is focused on the segmentation of pine seedlings. We have many phot
 
 List key features of your project.
 
-- [Standardization of images using white reference](./Standardization)
-- [Image transformation](./2)
-- Image splitting
-- Image segmentation using YOLOv7
-- Backround removal
-- Image composing
-- Overlay of individual outputs
-- Identification of individual seedlings and acquisition of RGB values
+- [Standardization of images using white reference](./1_standardization)
+- [Image transformation](./2_transformation)
+- [Image splitting](./3_splitting)
+- [Image segmentation using YOLOv7](./4_segmentation)
+- [Backround removal](./5_backround_removal)
+- [Image composing](./6_composing)
+- [Overlay of individual outputs](./7_overlaying)
+- [Identification of individual seedlings and acquisition of RGB values](./8_RGB_acquisition)
 
 ## License
 This project is licensed under the [GNU General Public License v3.0](LICENSE).
