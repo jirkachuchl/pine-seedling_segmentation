@@ -1,5 +1,5 @@
 //First you need to create a ROI (region of interest) aroud your white reference
-//Then this you fill the outputFilePath and the macro should work
+//Then this you fill the outputFilePath and the macro should work 
 
 vystup = getInfo("image.filename");
 vystup = substring(vystup, 9, indexOf(vystup, "."));
