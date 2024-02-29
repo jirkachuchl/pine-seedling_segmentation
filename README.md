@@ -19,7 +19,7 @@ This project is focused on the segmentation of pine seedlings. We have many phot
 
 List key features of your project.
 
-- Standardization of images using white reference
+- Standardization of images using white reference(Standardization)
 - Image transformation
 - Image splitting
 - Image segmentation using YOLOv7
