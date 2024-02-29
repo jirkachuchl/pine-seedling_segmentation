@@ -6,9 +6,6 @@ This project is focused on the segmentation of pine seedlings.
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
