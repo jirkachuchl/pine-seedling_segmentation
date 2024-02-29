@@ -1,25 +1,24 @@
-# Image Transformation
+# Saving coordinates of corners and image Transformation
 ## Features
 - [Coordinates of corners to csv](#Coordinates-of-corners-to-csv)
 - [Image transformation](#Image-transformation)
 
-# Coordinates of corners to csv
+## Coordinates of corners to csv
 
-This Python script utilizes the OpenCV and Pandas libraries to extract clicked coordinates from images. It provides an interactive way to select points on an image using mouse clicks and saves the coordinates in a CSV file.
+First it is necessary to save the coordinates of planter to csv. After running this sript the new window will open. You will click on  the corners in this order:
+- 1st: upper left corner
+- 2nd: upper right corner
+- 3rd: lower right corner
+- 4th: lower left corner
 
-## Function
-
-### process_image(image_path)
-
-The `process_image` function allows users to interactively click on points in an image and records the coordinates. The function returns a DataFrame containing the image name and clicked coordinates.
+This script is created as loop, so insert path to directory with your images and insert range of images (+1) and it will open automatically all images in the directory
+Don't forget to fill path to your output csv file.
 
 ## Example Usage
 
-The script includes an example loop for processing multiple images. The processed coordinates are concatenated into a final DataFrame and saved to a CSV file.
+The script includes an example loop for processing multiple images.
 
 ```python
-result_df = pd.DataFrame()  # Initialize an empty DataFrame to store the results
-
 # Set the range of numbers for processed images
 for i in range(1, 4):
     image_path = f"C:/path/to/your/image/{i}.png"  # Replace with the path to your images
@@ -32,4 +31,6 @@ result_df.to_csv("C:/path/to/your/output/csvfile/coordinates.csv", index=False, 
 # Print the final DataFrame
 print("Clicked Coordinates Table for All Images:")
 print(result_df)
+```
+## Image transformation
 
