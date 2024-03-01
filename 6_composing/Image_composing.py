@@ -13,7 +13,7 @@ for k in range(1,30):
   for i in range(1, num_parts_height + 1):
       for j in range(1, num_parts_width + 1):
           # Load image part
-          part_path = f"/content/gdrive/MyDrive/leden/{k}/cast_{i}_{j}.jpg"
+          part_path = f"/path/to/your/image_parts/{k}/part_{i}_{j}.png"
           part = Image.open(part_path)
 
           # Get the size of the current part
@@ -31,7 +31,7 @@ for k in range(1,30):
   for i in range(1, num_parts_height + 1):
       for j in range(1, num_parts_width + 1):
           # Load image part
-          part_path = f"/content/gdrive/MyDrive/leden/{k}/cast_{i}_{j}.jpg"
+          part_path = f"/path/to/your/image_parts/{k}/part_{i}_{j}.png"
           part = Image.open(part_path)
 
           # Compute position for the current part
@@ -49,6 +49,6 @@ for k in range(1,30):
           full_img[y:y + max_height, x:x + max_width] = part_array
 
   # Save the combined image
-  output_path = f"/content/gdrive/MyDrive/leden/vystup/{k}_cast.png"
+  output_path = f"/path/to/your/output/folder/{k}_cast.png"
   Image.fromarray(full_img).save(output_path)
   print(f"{k} is done")
