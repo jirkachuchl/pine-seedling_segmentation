@@ -71,4 +71,5 @@ Here the part of the code is turned of, so the bounding box won't be displayed i
   ################ //set this part of for turning of the boinding box// #############
 ```
 ## Weights
-In the folder [weights](./weights) there is a trained model which can be used for pine seedling segmentation 
+In the folder [weights](./weights) there is a trained model which can be used for pine seedling segmentation. Usage is also described in its [README.md](./weights/README.md)
+
