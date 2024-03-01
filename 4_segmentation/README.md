@@ -6,19 +6,17 @@ The usage is described in the directory
 There are only few modifications
 ### 1. Making the resulting mask opaque | modifications are in this part of algoritmus: [code](./yolov7-u7-seg/seg/utils/segment/plots.py)
 Here the alpha is set to 1, so resulting mask will have only one opaque colour
-
-'''python
+```python
 ###########################    set alpha to 1    ###############################
 
 def plot_masks(img, masks, colors, alpha=1):
 
 ########################### // set alpha to 1 // ###############################
-'''
+```
 
 ### 2. Setting a mask colour | modifications are in this part of algoritmus: [code](./yolov7-u7-seg/seg/utils/plots.py)
 Here the color RGB HEXCODE is used for setting a colour of mask
-
-'''python
+```python
      hex = matplotlib.colors.TABLEAU_COLORS.values()
     ####################################### set your own colors for mask ######################### 
     hexs = ('FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838')
@@ -28,12 +26,12 @@ Here the color RGB HEXCODE is used for setting a colour of mask
     '2C99A8', '00C2FF', '344593', '6473FF', '0018EC', '8438FF', '520085', 'CB38FF', 'FF95C8', 'FF37C7')
     '''
     ####################################### //set your own colors for mask //######################
-'''
+```
 
 ### 3. Turning of the bounding box | modifications are in this part of algoritmus: [code](./yolov7-u7-seg/seg/utils/plots.py)
 Here the part of the code is turned of, so the bounding box won't be displayed in the resulting image
 
-'''python
+```python
       # Add one xyxy box to image with label
   ################ set this part of for turning of the boinding box #############
       '''
