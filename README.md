@@ -32,6 +32,6 @@ This project is licensed under the [GNU General Public License v3.0](LICENSE).
 ## Example
 <div align="center">
     <a href="/output/1_output.png">
-        <img src="/output/1_output.png" width="59%"/>
+        <img src="/output/1_output.png" width="79%"/>
     </a>
 </div>
