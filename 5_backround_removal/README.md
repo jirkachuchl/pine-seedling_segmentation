@@ -1,4 +1,4 @@
-# Bacround removal | [code](./6_mask_clip)
+# Backround removal | [code](./6_mask_clip.py)
 This Python script uses the `PIL` (Pillow) library to clip an image based on a specified mask. It replaces non-red pixels in the original image with corresponding pixels from the mask image.
 
 ## Usage
