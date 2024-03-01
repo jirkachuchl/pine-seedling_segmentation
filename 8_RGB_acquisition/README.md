@@ -4,6 +4,7 @@ This Python script processes a range of images, extracting RGB values and saving
 ## Usage
 In this code you should fill only range of your images (+1) and path to output folder and path to images which you transformed (step 2) ans path to images with mask (step 7)
 ```python
+############################# LOADINGS  #####################################
 #Set range of your images
 for u in range(1,31):
     
