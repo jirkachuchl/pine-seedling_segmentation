@@ -33,9 +33,17 @@ matplotlib.use('Agg')  # for writing to files only
 class Colors:
     # Ultralytics color palette https://ultralytics.com/
     def __init__(self):
+       
         # hex = matplotlib.colors.TABLEAU_COLORS.values()
+        ####################################### set your own colors for mask ######################### 
+        hexs = ('FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838', 'FF3838')
+        # original hexs
+        '''
         hexs = ('FF3838', 'FF9D97', 'FF701F', 'FFB21D', 'CFD231', '48F90A', '92CC17', '3DDB86', '1A9334', '00D4BB',
                 '2C99A8', '00C2FF', '344593', '6473FF', '0018EC', '8438FF', '520085', 'CB38FF', 'FF95C8', 'FF37C7')
+        '''
+        ####################################### //set your own colors for mask //######################
+
         self.palette = [self.hex2rgb(f'#{c}') for c in hexs]
         self.n = len(self.palette)
 
@@ -83,7 +91,11 @@ class Annotator:
         self.lw = line_width or max(round(sum(im.shape) / 2 * 0.003), 2)  # line width
 
     def box_label(self, box, label='', color=(128, 128, 128), txt_color=(255, 255, 255)):
-        # Add one xyxy box to image with label
+       
+      
+      # Add one xyxy box to image with label
+  ################ set this part of for turning of the boinding box #############
+      '''
         if self.pil or not is_ascii(label):
             self.draw.rectangle(box, width=self.lw, outline=color)  # box
             if label:
@@ -112,6 +124,8 @@ class Annotator:
                             txt_color,
                             thickness=tf,
                             lineType=cv2.LINE_AA)
+      '''
+  ################ //set this part of for turning of the boinding box// #############
 
     def rectangle(self, xy, fill=None, outline=None, width=1):
         # Add rectangle to image (PIL-only)
