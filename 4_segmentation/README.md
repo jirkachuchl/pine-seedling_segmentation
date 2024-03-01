@@ -4,7 +4,7 @@ The usage is described in the directory
 
 ## Features
 - [Modifications](#modifications)
-- [Weights].(#weights)
+- [Weights](#weights)
 
 ## Modifications
 There are only few modifications
