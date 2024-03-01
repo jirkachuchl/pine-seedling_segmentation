@@ -12,8 +12,11 @@ from .. import threaded
 from ..general import xywh2xyxy
 from ..plots import Annotator, colors
 
+###########################    set alpha to 1    ###############################
 
-def plot_masks(img, masks, colors, alpha=0.5):
+def plot_masks(img, masks, colors, alpha=1):
+
+########################### // set alpha to 1 // ###############################
     """
     Args:
         img (tensor): img is in cuda, shape: [3, h, w], range: [0, 1]
