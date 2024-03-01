@@ -2,6 +2,10 @@
 This algoritmus is slightly modified algoritmus YOLOv7 branch u7 (https://github.com/WongKinYiu/yolov7.git) 
 The usage is described in the directory
 
+## Features
+- [Modifications](#modifications)
+- [Weights].(#weights)
+
 ## Modifications
 There are only few modifications
 ### 1. Making the resulting mask opaque | modifications are in this part of algoritmus: [code](./yolov7-u7-seg/seg/utils/segment/plots.py)
@@ -65,4 +69,6 @@ Here the part of the code is turned of, so the bounding box won't be displayed i
                             lineType=cv2.LINE_AA)
       '''
   ################ //set this part of for turning of the boinding box// #############
-    
+```
+## Weights
+In the folder [weights](./weights) there is a trained model which can be used for pine seedling segmentation 
