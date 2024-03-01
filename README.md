@@ -30,3 +30,4 @@ List key features of your project.
 This project is licensed under the [GNU General Public License v3.0](LICENSE).
 
 ## Example
+![Example Image](/path/to/your/images/example_image.png)
