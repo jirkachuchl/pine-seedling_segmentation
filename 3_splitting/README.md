@@ -1,4 +1,4 @@
-# Image Partitioning Script | [code](./4_Splitting_images_on_parts.R)
+# Image splitting script | [code](./4_Splitting_images_on_parts.R)
 
 This R script uses the `png` library to partition images into smaller parts. It's designed to cut images into specified parts and save them to an output folder.
 
