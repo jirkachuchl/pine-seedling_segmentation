@@ -12,13 +12,13 @@ import os
 
 
 # Load the CSV file containing the image names and corner coordinates
-csv_file_path = "D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/transformed/coordinates.csv"
+csv_file_path = "C:/path/to/your/csv/with/coordinates/coordinates.csv"
 
 # Set the path to the folder containing the images
-images_folder_path = "D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/corrected"
+images_folder_path = "C:/path/to/your/folder/with/images"
 
 # Set the path to the folder for the transformed image results
-results_folder_path = "D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/transformed"
+results_folder_path = "C:/path/to/your/output/folder"
 
 # Read the CSV file
 with open(csv_file_path, 'r') as csvfile:
@@ -67,9 +67,9 @@ with open(csv_file_path, 'r') as csvfile:
         cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
 
         # Show the image in the window
-        cv2.imshow("Image", resized_image)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+       #  cv2.imshow("Image", resized_image)
+       # cv2.waitKey(0)
+       # cv2.destroyAllWindows()
 
         # Construct the transformed image path
         transformed_image_path = os.path.join(results_folder_path, f'{image_name.split(".")[0]}_transformed.png')
