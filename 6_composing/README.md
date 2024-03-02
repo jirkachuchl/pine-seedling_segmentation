@@ -26,7 +26,7 @@ part_path = f"/path/to/your/image_parts/{k}/part_{i}_{j}.png"
 # row 55
 output_path = f"/path/to/your/output/folder/{k}_cast.png"
 ```
-## Adding black stripes | [code](./8_same_dimensions_for_overlaying.py)
+## Adding black stripes | [code](./8_same_dimesnions_for_overlaying.py)
 This code adds black stripes to the composed images. It is because we splitted images with some shift, and now we need to overlay images without the shift.
 
 ### Usage
