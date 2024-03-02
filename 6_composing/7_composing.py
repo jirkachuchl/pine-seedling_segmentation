@@ -14,7 +14,7 @@ for k in range(1, 2):
     for i in range(1, num_parts_height + 1):
         for j in range(1, num_parts_width + 1):
             # Load image part
-            part_path = f"D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/segmented/{k}_200_down_{i}_{j}.png"
+            part_path = f"D:/path/to/your/parts/{k}_200_down_{i}_{j}.png"
             part = Image.open(part_path)
 
             # Append the part image and its size to the lists
@@ -52,6 +52,6 @@ for k in range(1, 2):
     full_img = np.concatenate(rows, axis=0)
 
     # Save the combined image
-    output_path = f"D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/composed/{k}_200_down.png"
+    output_path = f"D:/path/to your/composed/output/{k}_200_down.png"
     Image.fromarray(full_img).save(output_path)
     print(f"{k} is done")
