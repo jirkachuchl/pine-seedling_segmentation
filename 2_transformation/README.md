@@ -32,7 +32,7 @@ result_df.to_csv("C:/path/to/your/output/csvfile/coordinates.csv", index=False, 
 print("Clicked Coordinates Table for All Images:")
 print(result_df)
 ```
-## Image transformation | [code](./3_transformation_by_corners_coordinates_from_CSV.py)
+## Image transformation | [code](./3_transformation.py)
 In this code, you only have to set paths:
 - path to csv with corners coordinates (csv_file_path)
 - path to the folder containing the images of planters you want to transform (images_folder_path)
