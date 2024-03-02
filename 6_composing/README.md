@@ -33,11 +33,11 @@ This code adds black stripes to the composed images. It is because we splitted i
 In this code, you need to fill path to your folder with composed images, path to output folder where you want results, name-logic of your images and you can add range of images +1 so the loop will process your images at once.
 You can also set the width or height of the black stripe and its position
 ```python
-slozka = "D:/path/to/your/composed/images/"
-vystup = "D:/path/to/your/output/images/"
+input_foder = "D:/path/to/your/composed/images/"
+output_folder = "D:/path/to/your/output/images/"
 
 for k in range(1, 2):
-    add_black_strip(slozka + f"{k}_200_right.png", vystup + f"{k}_200_right.png", 200, 0, 'left')
-    add_black_strip(slozka + f"{k}_400_right.png", vystup + f"{k}_400_right.png", 400, 0, 'left')
-    add_black_strip(slozka + f"{k}_400_down.png", vystup + f"{k}_400_down.png", 0, 400, 'top')
-    add_black_strip(slozka + f"{k}_200_down.png", vystup + f"{k}_200_down.png", 0, 200, 'top')
+    add_black_strip(input_foder + f"{k}_200_right.png", output_folder + f"{k}_200_right.png", 200, 0, 'left')
+    add_black_strip(input_foder + f"{k}_400_right.png", output_folder + f"{k}_400_right.png", 400, 0, 'left')
+    add_black_strip(input_foder + f"{k}_400_down.png", output_folder + f"{k}_400_down.png", 0, 400, 'top')
+    add_black_strip(input_foder + f"{k}_200_down.png", output_folder + f"{k}_200_down.png", 0, 200, 'top')
