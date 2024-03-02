@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar  2 13:51:51 2024
+
+@author: jirka
+"""
+
 ############################# LIBRARIES #####################################
 
 import csv
@@ -79,17 +86,17 @@ def calculate_average_color(image, center_x, center_y, diameter):              #
     ############################# LOADINGS  #####################################
 
 #Set range of your images
-for u in range(1,31):
+for u in range(1,2):
     
     # Path to output image folder
-    output_name = f"C:/path/to/output/folder//{u}_RGB.csv"
+    output_name = f"D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/output_rgb/1.csv"
     
     # Path to image without mask (transformed non-splitted image)
-    image1_path = f"C:/jirka/Documents/skola/mvp/monca_sadbovace_svetlo/yolo_casti_masky/nove_puvodni/{u}.png"
+    image1_path = f"D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/transformed/1_transformed.png"
     image1 = cv2.imread(image1_path)
     
     # Path to image with mask 
-    image_path = f"D:/jirka/Documents/skola/mvp/monca_sadbovace_svetlo/slunce_orez/spojene_masky/vystup_{u}.png"
+    image_path = f"D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/overlayed/1.png"
     image = cv2.imread(image_path)
 
     ############################# PLANTER CORNERS ###############################
@@ -141,7 +148,7 @@ for u in range(1,31):
         counts.extend(sublist)
        
     # Get average RGB values and HEX codes for each area around the defined points
-    diameter = int(min((((x_max - x_min) / columns)/2),(((y_max - y_min) / rows)/2)))
+    diameter = int(min((((x_max - x_min) / columns)),(((y_max - y_min) / rows))))
     average_rgbs = []
     hex_codes = []
 
