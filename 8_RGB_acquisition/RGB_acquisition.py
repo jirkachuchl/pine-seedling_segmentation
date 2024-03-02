@@ -89,14 +89,14 @@ def calculate_average_color(image, center_x, center_y, diameter):              #
 for u in range(1,2):
     
     # Path to output image folder
-    output_name = f"D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/output_rgb/1.csv"
+    output_name = f"C:/path/to/output/folder//{u}_RGB.csv"
     
     # Path to image without mask (transformed non-splitted image)
-    image1_path = f"D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/transformed/1_transformed.png"
+    image1_path = f"C:/path/to/your/transformed/{u}_transformed.png"
     image1 = cv2.imread(image1_path)
     
-    # Path to image with mask 
-    image_path = f"D:/jirka/Documents/skola/Ing/DP/DP_poznamky_a_skripty/real_postup/postup/overlayed/1.png"
+    # Path to image with segmented pines
+    image_path = f"C:/path/to/your/segmented/images/{u}_overlayed.png"
     image = cv2.imread(image_path)
 
     ############################# PLANTER CORNERS ###############################
