@@ -27,13 +27,13 @@ def add_black_strip(image_path, output_path, strip_width, strip_height, position
     
     combined_image.save(output_path)
 
-slozka = "D:/path/to/your/composed/images/"
-vystup = "D:/path/to/your/output/images/"
+input_foder = "D:/path/to/your/composed/images/"
+output_folder = "D:/path/to/your/output/images/"
 
 for k in range(1, 2):
-    add_black_strip(slozka + f"{k}_200_right.png", vystup + f"{k}_200_right.png", 200, 0, 'left')
-    add_black_strip(slozka + f"{k}_400_right.png", vystup + f"{k}_400_right.png", 400, 0, 'left')
-    add_black_strip(slozka + f"{k}_400_down.png", vystup + f"{k}_400_down.png", 0, 400, 'top')
-    add_black_strip(slozka + f"{k}_200_down.png", vystup + f"{k}_200_down.png", 0, 200, 'top')
+    add_black_strip(input_foder + f"{k}_200_right.png", output_folder + f"{k}_200_right.png", 200, 0, 'left')
+    add_black_strip(input_foder + f"{k}_400_right.png", output_folder + f"{k}_400_right.png", 400, 0, 'left')
+    add_black_strip(input_foder + f"{k}_400_down.png", output_folder + f"{k}_400_down.png", 0, 400, 'top')
+    add_black_strip(input_foder + f"{k}_200_down.png", output_folder + f"{k}_200_down.png", 0, 200, 'top')
 
     print(f"{k} is done")
