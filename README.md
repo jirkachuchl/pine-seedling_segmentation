@@ -13,6 +13,8 @@ This project is focused on the segmentation of pine seedlings.
 
 This project is focused on the segmentation of pine seedlings. We have many photos of planters with pine seedlings from three population of scots pine (Pinus sylvestrris). The main goal is to standardize images to make them comparable, segment seedlings, and determine their average color.
 
+As first input into this process the .tiff file is optimal. Ideally it could be obtainded from raw file (e.g. DNG, RAW...) applying only minimal necessary processing (demosaicing, color space conversion, and linearization). Avoid applying tone curves, sharpening, or other artistic adjustments during this step to preserve data integrity.
+
 ## Features
 
 List key features of your project.
