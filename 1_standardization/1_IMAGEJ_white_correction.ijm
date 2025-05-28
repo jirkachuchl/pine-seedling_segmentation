@@ -5,7 +5,7 @@ vystup = getInfo("image.filename");
 vystup = substring(vystup, 9, indexOf(vystup, "."));
 
 // Path to the output file
-outputFilePath = "D:/path/to/output.png"
+outputFilePath = "D:/path/to/output.tiff"
 
 run("Duplicate...", "title =1");
 name=getTitle();
