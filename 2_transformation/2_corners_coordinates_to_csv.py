@@ -12,26 +12,26 @@ def process_image(image_path):
     # Extract the image name from the path
     image_name = os.path.basename(image_path)
 
-    # Funkce pro obsluhu události kliknutí myši
+    # Mouse click function
     def mouse_callback(event, x, y, flags, param):
-        if event == cv2.EVENT_LBUTTONDOWN:  # Pokud bylo stisknuto tlačítko myši
+        if event == cv2.EVENT_LBUTTONDOWN:  # If a button is clicked
             print(f'{x}, {y}')
             clicked_coordinates.extend([x, y])  # Append individual x and y coordinates
 
-    # Načtení obrázku
+    # Image reading
     image = cv2.imread(image_path)
 
-    # Vytvoření okna pro zobrazení obrázku
+    # Windows creation for image displaying
     cv2.namedWindow('Obrazek', cv2.WINDOW_NORMAL)  # Použití normálního okna
 
-    # Přiřazení funkce pro obsluhu události kliknutí myši
+    # Assigning a function to handle the mouse click event
     cv2.setMouseCallback('Obrazek', mouse_callback)
 
-    # Zobrazení obrázku
+    # Image display
     cv2.imshow('Obrazek', image)
     cv2.waitKey(0)
 
-    # Zavření okna
+    # Closing the window
     cv2.destroyAllWindows()
 
     # Create a DataFrame with dynamic column names based on the number of clicked points
