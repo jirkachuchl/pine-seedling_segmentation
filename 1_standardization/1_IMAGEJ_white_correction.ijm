@@ -3,9 +3,10 @@
 
 vystup = getInfo("image.filename");
 vystup = substring(vystup, 9, indexOf(vystup, "."));
+run("Set Measurements...", "mean");
 
 // Path to the output file
-outputFilePath = "D:/path/to/output.tiff"
+outputFilePath = "D:/path/to/output.png"
 
 run("Duplicate...", "title =1");
 name=getTitle();
